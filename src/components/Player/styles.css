@@ -1,0 +1,39 @@
+.player-container {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba(255, 255, 255, 0.9);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	backdrop-filter: blur(5px);
+
+	z-index: 2;
+}
+
+#preview-image {
+	height: 100vmin;
+
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#preview-close-icon {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+
+	cursor: pointer;
+
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+}
+
+#preview-close-icon:hover {
+	background: rgba(255, 255, 255, 0.3);
+}

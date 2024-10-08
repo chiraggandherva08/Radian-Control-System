@@ -1,0 +1,159 @@
+.table-container {
+	width: 100vw;
+	max-height: 600px;
+
+	overflow-y: scroll;
+
+	margin-bottom: 40px;
+	box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.03);
+}
+
+.explorer {
+	border-collapse: collapse;
+	width: 100%;
+
+	min-width: 950px;
+
+	overflow-x: scroll;
+}
+
+.shrink {
+	width: calc(100vw - 320px);
+}
+
+.explorer th,
+.explorer td {
+	line-height: 30.5px;
+	font-size: 16px;
+
+	height: 45px;
+	padding: 0px 20px;
+}
+
+.explorer th:nth-child(1),
+.explorer td:nth-child(1) {
+	padding-left: 45px;
+}
+
+.explorer th {
+	font-weight: 500;
+}
+
+.explorer tr {
+	border-bottom: 0.5px solid #00000050;
+	transition-duration: 0.3s;
+}
+
+.selected-item {
+	background: #b7d9ea;
+}
+
+.explorer thead tr:hover {
+	background: inherit;
+}
+
+.selected-item:hover {
+	background: #add3e6;
+}
+
+.explorer td a {
+	color: inherit;
+}
+
+.explorer img {
+	height: 20px;
+	margin-right: 10px;
+}
+
+.shared {
+	border-radius: 50%;
+
+	width: 25px;
+	height: 25px;
+
+	color: white;
+	cursor: default;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.actions-icon {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+
+.actions-icon:hover {
+	border-radius: 50%;
+	border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.nothing-to-show {
+	width: 100%;
+	background: #ffffff;
+	color: #4e4e4e;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+/* ============================ LOADING_STATE ============================ */
+.loading-state {
+	width: 100%;
+	height: 50px;
+
+	background: inherit;
+
+	overflow: hidden;
+
+	border-bottom: 0.5px solid #d0d0d0;
+}
+
+.loader {
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+
+	background: linear-gradient(45deg, #fff, rgb(245, 245, 245), #fff);
+
+	animation: loadingAnimation 1s infinite;
+}
+
+@keyframes loadingAnimation {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(100vw);
+	}
+}
+
+@media (max-width: 768px) {
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.explorer {
+		min-width: 200px;
+	}
+
+	.shrink {
+		width: 100vw;
+	}
+
+	.explorer th,
+	.explorer td {
+		padding: 0px 10px;
+	}
+
+	.explorer th:nth-child(1),
+	.explorer td:nth-child(1) {
+		padding-left: 10px;
+	}
+
+	.explorer {
+		overflow: hidden;
+	}
+}
